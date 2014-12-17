@@ -1,0 +1,7 @@
+.tmp/
+node_modules/
+app/vendor/
+bower_components/
+app/vendor/
+dist/
+*.log

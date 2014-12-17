@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Testing BPG image compression</title>
+    <meta name="description" content="testing BPG (Better Portable Graphics) image compression">
+    <meta name="author" content="Till Rüsberg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet'>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <script defer async src="scripts/bpgdec.js"></script>
+    <script defer async src="scripts/webpjs-0.0.2.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="headline">
+        <div class="container">
+            <h1>Testing BPG image compression<br>
+                <small>H.265 based BPG vs. JPG vs. WebP vs. H.264</small>
+            </h1>
+        </div>
+    </div>
+
+    <div id="setup" class="container">
+        <h2>Testing setup</h2>
+        <p>todo</p>
+    </div>
+
+
+    <div class="img-comparison">
+
+        <h2 id="lenna-10k">Lenna @ 10k</h2>
+        <ul class="nav nav-pills" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#lenna-original" aria-controls="home" role="tab" data-toggle="tab">Original</a>
+            </li>
+            <li role="presentation">
+                <a href="#lenna-jpg" aria-controls="profile" role="tab" data-toggle="tab">JPG</a>
+            </li>
+            <li role="presentation">
+                <a href="#lenna-webp" aria-controls="messages" role="tab" data-toggle="tab">WebP</a>
+            </li>
+            <li role="presentation">
+                <a href="#lenna-h264" aria-controls="settings" role="tab" data-toggle="tab">H.264</a>
+            </li>
+            <li role="presentation">
+                <a href="#lenna-bpg" aria-controls="settings" role="tab" data-toggle="tab">BPG</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="lenna-original">
+                <img wdith="512" height="512" src="images/comparison/lenna/lena512.png" alt="">
+            </div>
+            <div class="tab-pane" id="lenna-jpg">
+                <img wdith="512" height="512" src="images/comparison/lenna/lena512.jpg" alt="">
+            </div>
+            <div class="tab-pane" id="lenna-webp">
+                <img wdith="512" height="512" src="images/comparison/lenna/lena512.webp" alt="">
+            </div>
+            <div class="tab-pane" id="lenna-h264">
+                <video wdith="512" height="512" src="images/comparison/lenna/lena512.mp4" autoplay preload></video>
+            </div>
+            <div class="tab-pane" id="lenna-bpg">
+                <img wdith="512" height="512" src="images/comparison/lenna/lena512.bpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="img-comparison">
+        <ul class="nav nav-pills" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#c1-original" aria-controls="home" role="tab" data-toggle="tab">
+                    Original
+                    <small>5.9 MB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c1-jpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    JPG
+                    <small>247 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c1-bpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG
+                    <small>156 kB</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="c1-original">
+                <img src="images/comparison/1.png" alt="" />
+            </div>
+            <div class="tab-pane" id="c1-jpg">
+                <img src="images/comparison/1.jpg" alt="" />
+            </div>
+            <div class="tab-pane" id="c1-bpg">
+                <img src="images/comparison/1.bpg" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="img-comparison">
+        <ul class="nav nav-pills" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#c2-original" aria-controls="home" role="tab" data-toggle="tab">
+                    Original
+                    <small>6.3 MB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c2-jpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    JPG
+                    <small>325 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c2-bpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG
+                    <small>344 kB</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="c2-original">
+                <img src="images/comparison/2.png" alt="" />
+            </div>
+            <div class="tab-pane" id="c2-jpg">
+                <img src="images/comparison/2.jpg" alt="" />
+            </div>
+            <div class="tab-pane" id="c2-bpg">
+                <img src="images/comparison/2.bpg" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="img-comparison">
+        <ul class="nav nav-pills" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#c3-original" aria-controls="home" role="tab" data-toggle="tab">
+                    Original
+                    <small>3.9 MB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c3-jpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    JPG
+                    <small>170 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c3-bpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG
+                    <small>44 kB</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="c3-original">
+                <img src="images/comparison/3.png" alt="" />
+            </div>
+            <div class="tab-pane" id="c3-jpg">
+                <img src="images/comparison/3.jpg" alt="" />
+            </div>
+            <div class="tab-pane" id="c3-bpg">
+                <img src="images/comparison/3.bpg" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="img-comparison">
+        <ul class="nav nav-pills" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#c4-original" aria-controls="home" role="tab" data-toggle="tab">
+                    Original
+                    <small>6.3 MB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c4-jpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    JPG
+                    <small>325 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c4-bpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG
+                    <small>157 kB</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="c4-original">
+                <img src="images/comparison/4.png" alt="" />
+            </div>
+            <div class="tab-pane" id="c4-jpg">
+                <img src="images/comparison/4.jpg" alt="" />
+            </div>
+            <div class="tab-pane" id="c4-bpg">
+                <img src="images/comparison/4.bpg" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="img-comparison">
+        <ul class="nav nav-pills" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#c7-original" aria-controls="home" role="tab" data-toggle="tab">
+                    Original
+                    <small>6 MB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c7-jpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG 8-bit
+                    <small>107 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#c7-bpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG 12-bit
+                    <small>106 kB</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="c7-original">
+                <img src="images/comparison/7.png" alt="" />
+            </div>
+            <div class="tab-pane" id="c7-jpg">
+                <img src="images/comparison/7.bpg" alt="" />
+            </div>
+            <div class="tab-pane" id="c7-bpg">
+                <img src="images/comparison/7-12bit.bpg" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="img-comparison">
+        <h2 id="alpha-channel-testing">alpha channel testing</h2>
+        <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#transparency1-original" aria-controls="home" role="tab" data-toggle="tab">
+                    Original
+                    <small>219 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#transparency1-webp" aria-controls="profile" role="tab" data-toggle="tab">
+                    WebP
+                    <small>162 kB</small>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#transparency1-bpg" aria-controls="profile" role="tab" data-toggle="tab">
+                    BPG
+                    <small>154 kB</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="transparency1-original">
+                <img src="images/comparison/transparency.png" alt="">
+            </div>
+            <div class="tab-pane" id="transparency1-webp">
+                <img src="images/comparison/transparency.webp" alt="">
+            </div>
+            <div class="tab-pane" id="transparency1-bpg">
+                <img src="images/comparison/transparency.bpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="history" class="container">
+        <h2>History</h2>
+        <dl>
+            <dt>2014/16/12</dt> <dd>added alpha-channel testing</dd>
+            <dt>2014/15/12</dt> <dd>updated <code>bpgdec.js</code> to v0.9.3</dd>
+            <dt>2014/14/12</dt> <dd>basic comparison of bpg/webp/jpg</dd>
+        </dl>
+    </div>
+
+
+
+
+    <!-- build:js scripts/site.js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/bootstrap/js/tab.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+
+</html>

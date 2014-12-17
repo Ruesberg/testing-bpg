@@ -1,0 +1,145 @@
+// Core variables and mixins
+//@import "variables.less";
+
+@import "../vendor/bootstrap/less/variables.less";
+@import "variables.less";
+@import "../vendor/bootstrap/less/mixins.less";
+
+// Reset
+@import "../vendor/bootstrap/less/normalize.less";
+
+// Core CSS
+@import "../vendor/bootstrap/less/scaffolding.less";
+@import "../vendor/bootstrap/less/type.less";
+//@import "../vendor/bootstrap/less/code.less";
+
+//@import "../vendor/bootstrap/less/grid.less";
+//@import "../vendor/bootstrap/less/tables.less";
+//@import "../vendor/bootstrap/less/forms.less";
+@import "../vendor/bootstrap/less/buttons.less";
+
+
+// Components
+//@import "../vendor/bootstrap/less/component-animations.less";
+//@import "../vendor/bootstrap/less/glyphicons.less";
+//@import "../vendor/bootstrap/less/dropdowns.less";
+//@import "../vendor/bootstrap/less/button-groups.less";
+//@import "../vendor/bootstrap/less/input-groups.less";
+@import "../vendor/bootstrap/less/navs.less";
+//@import "../vendor/bootstrap/less/navbar.less";
+//@import "../vendor/bootstrap/less/breadcrumbs.less";
+//@import "../vendor/bootstrap/less/pagination.less";
+//@import "../vendor/bootstrap/less/pager.less";
+//@import "../vendor/bootstrap/less/labels.less";
+//@import "../vendor/bootstrap/less/badges.less";
+//@import "../vendor/bootstrap/less/jumbotron.less";
+//@import "../vendor/bootstrap/less/thumbnails.less";
+//@import "../vendor/bootstrap/less/alerts.less";
+//@import "../vendor/bootstrap/less/progress-bars.less";
+//@import "../vendor/bootstrap/less/media.less";
+//@import "../vendor/bootstrap/less/list-group.less";
+//@import "../vendor/bootstrap/less/panels.less";
+//@import "../vendor/bootstrap/less/wells.less";
+//@import "../vendor/bootstrap/less/close.less";
+
+// Components w/ JavaScript
+//@import "../vendor/bootstrap/less/modals.less";
+//@import "../vendor/bootstrap/less/tooltip.less";
+//@import "../vendor/bootstrap/less/popovers.less";
+//@import "../vendor/bootstrap/less/carousel.less";
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 0 0.5em 0;
+}
+img, video, object, canvas {
+  display: block;
+  margin: auto;
+  background: @gray-lighter;
+  visibility: visible !important;
+}
+p {
+  hyphens: auto;
+}
+dt,dd {
+  margin-bottom: 0.5em;
+}
+dt {
+  float: left;
+  width: 6em;
+}
+dd {
+  margin-left: 7em;
+}
+
+#headline {
+  text-align: center;
+  background: @brand-primary;
+  background: linear-gradient(@brand-primary, darken(@brand-primary, 8%));
+  outline: 1px solid @gray-dark;
+  border-bottom: 3px solid @brand-primary;
+  h1 {
+    color: #fff;
+    text-shadow: 1px 1px 2px darken(@brand-primary, 10%);
+  }
+  small {
+    color: lighten(@brand-primary, 35%);
+  }
+}
+
+.container {
+  padding: 1em;
+  margin: auto;
+  max-width: 50em;
+  h1,h2,h3,h4,h5,h6 {
+    color: @brand-primary;
+  }
+}
+.tab-pane {
+  width: 100%;
+}
+.nav-pills {
+  overflow: hidden;
+  background: linear-gradient(lighten(@gray-dark, 2%), @gray);
+  display: inline-block;
+  border: 1px solid @gray-dark;
+  border-bottom-color: lighten(@gray, 10%);
+  border-radius: @border-radius-small;
+  > li {
+    float: none;
+    display: inline-block;
+  }
+  a {
+    color: @gray-lighter;
+    line-height: 1.1;
+    &:focus,
+    &:hover {
+      background-color: rgba(0,0,0,0.2);
+    }
+  }
+  small {
+    display: block;
+    opacity: 0.6
+  }
+  a:active,
+  .active a {
+    background: linear-gradient(lighten(@gray, 10%),@gray 1px,lighten(@gray-dark, 2%));
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4s);
+    outline: none;
+  }
+}
+
+.tab-content {
+  margin-top: 1em;
+  max-width: 100%;
+  overflow: auto
+}
+.img-comparison {
+  color: @gray-lighter;
+  background: @gray;
+  text-shadow: 0 -1px 0 @gray-darker;
+  padding: 1em;
+  margin: 1em 0;
+  border-top: 1px solid @gray-dark;
+  text-align: center;
+
+}
